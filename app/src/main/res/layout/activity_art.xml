@@ -10,24 +10,22 @@
         android:id="@+id/imageView"
         android:layout_width="220dp"
         android:layout_height="220dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginBottom="180dp"
         android:onClick="selectImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/selectimage" />
 
     <EditText
         android:id="@+id/nameText"
         android:layout_width="307dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Enter Art Name"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -36,29 +34,25 @@
         android:id="@+id/artistText"
         android:layout_width="307dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Enter Artist Name"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameText"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
 
     <EditText
         android:id="@+id/yearText"
         android:layout_width="307dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="170dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Enter Year"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/artistText"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/artistText" />
 
     <Button
         android:id="@+id/button"
@@ -67,6 +61,7 @@
         android:layout_marginTop="20dp"
         android:onClick="save"
         android:text="Save"
-        app:layout_constraintTop_toBottomOf="@+id/yearText"
-        tools:layout_editor_absoluteX="124dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yearText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
