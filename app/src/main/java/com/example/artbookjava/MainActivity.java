@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.artbookjava.databinding.ActivityMainBinding;
 
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     ArrayList<Art> artArrayList;
+    ArtAdapter artAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         artArrayList = new ArrayList<>();
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        artAdapter = new ArtAdapter(artArrayList);
+        binding.recyclerView.setAdapter(artAdapter);
         getData();
 
     }
@@ -52,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             Art art = new Art(name, id);
             artArrayList.add(art);
         }
+        artAdapter.notifyDataSetChanged();
         cursor.close();
     } catch (Exception e) {
 
